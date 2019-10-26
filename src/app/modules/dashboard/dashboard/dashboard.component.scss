@@ -5,7 +5,9 @@
   align-items: center;
   align-content: center;
   justify-content: center;
-
+background-color: rgba(255,255,255,0.5);
+  padding: 2rem;
+  border-radius: 1rem;
 }
 .form-field-add-client{
   width: 100%;
@@ -18,4 +20,9 @@
   align-items: center;
   align-content: center;
   justify-content: center;
+  background-image: url("https://cdn.vox-cdn.com/thumbor/rLt8Hw1iP1M9wf-la-yd5qyAsUI=/0x0:5472x3648/1200x800/filters:focal(2299x1387:3173x2261)/cdn.vox-cdn.com/uploads/chorus_image/image/64994861/GettyImages_532262202.0.jpg");
+background-size: cover;
+}
+.input-form-log-out{
+  margin-top: 1rem;
 }

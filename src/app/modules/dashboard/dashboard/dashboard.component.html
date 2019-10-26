@@ -1,6 +1,8 @@
 <section class="section-add-client">
+
+  <form class="add-client-form" novalidate [formGroup]="formRegister">
 <h1>Registra un nuevo usuario</h1>
-<form class="add-client-form" novalidate [formGroup]="formRegister">
+
   <mat-form-field class="form-field-add-client">
     <input matInput type="text" placeholder="Nombre" formControlName="name">
   </mat-form-field>
@@ -30,4 +32,6 @@
   <button mat-raised-button color="primary"  class="input-form-add-friend"(click)="addClient(formRegister.value)">Ingresar Usuario</button>
   <br>
 </form>
+
+  <button mat-raised-button color="primary"  class="input-form-log-out"(click)="addClient(formRegister.value)">Cerrar sesión</button>
 </section>

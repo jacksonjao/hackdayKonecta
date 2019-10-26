@@ -15,12 +15,12 @@ export class DatabaseService {
     this.itemDoc = db.doc('items/1');
     this.item = this.itemDoc.valueChanges();
 
-    this.clients = db.collection()
+   // this.clients = db.collection()
 
   }
 
   insertClient(item) {
 console.log(item)
-      this.
+     // this.
   }
 }
