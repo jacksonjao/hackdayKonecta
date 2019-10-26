@@ -1,3 +1,13 @@
-<p>
-  auth works!
-</p>
+<section class="login-page">
+  <form class="login-form" novalidate [formGroup]="form" (ngSubmit)="login()">
+    <mat-form-field [formControlName]="'email'">
+      <input matInput type="text" placeholder="Email" formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field [formControlName]="'password'">
+      <input matInput type="text" placeholder="Password" formControlName="password">
+    </mat-form-field>
+
+    <button mat-button class="input-form-add-friend" id="button-add-friend">Iniciar sesión</button>
+  </form>
+</section>
