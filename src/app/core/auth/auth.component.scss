@@ -1,3 +1,11 @@
+h4{
+  color: #363636;
+  font-size: 1.3rem;
+}
+
+input{
+  width: 100%;
+}
 .login-page{
   width: 100vw;
   height: 100vh;
@@ -7,13 +15,22 @@
   align-content: center;
   align-items: center;
   justify-content: center;
-  background-image: url("https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-image: url("https://www.desktopbackground.org/p/2014/11/15/856491_top-10-cute-dog-hd-wallpapers-cute-dogs-wallpapers-hd-39_1920x1200_h.jpg");
   background-size: cover;
 }
 .login-form{
   display: flex;
+  min-height: 30vh;
+  width: 20vw;
   flex-direction: column;
   align-content: center;
   align-items: center;
 justify-content: center;
+  border-radius: 10px;
+  padding: 1rem;
+  background: rgba(245, 245, 245, 0.4);
+}
+
+a:hover{
+  cursor: pointer;
 }

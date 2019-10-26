@@ -1,13 +1,79 @@
-<section class="login-page">
-  <form class="login-form" novalidate [formGroup]="form" (ngSubmit)="login()">
-    <mat-form-field [formControlName]="'email'">
+<section class="login-page" *ngIf="!isRegisterTemplate">
+  <form class="login-form" novalidate [formGroup]="form">
+    <h4>INICIAR SESIÓN</h4>
+    <mat-form-field>
       <input matInput type="text" placeholder="Email" formControlName="email">
     </mat-form-field>
 
-    <mat-form-field [formControlName]="'password'">
+    <mat-form-field>
       <input matInput type="text" placeholder="Password" formControlName="password">
     </mat-form-field>
-
-    <button mat-button class="input-form-add-friend" id="button-add-friend">Iniciar sesión</button>
+    <label class="error">{{errorMessage}}</label>
+    <label class="success">{{successMessage}}</label>
+    <br>
+    <button mat-raised-button color="primary"  class="input-form-add-friend"(click)="login(form.value)">Iniciar sesión</button>
+    <br>
+    <a (click)="isRegisterTemplate=true">¡Regístrate!</a>
   </form>
 </section>
+
+<section class="login-page" *ngIf="isRegisterTemplate">
+  <form class="login-form" novalidate [formGroup]="form">
+    <h4>REGÍSTRESE</h4>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Email" formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="text" placeholder="Password" formControlName="password">
+    </mat-form-field>
+    <label class="error">{{errorMessage}}</label>
+    <label class="success">{{successMessage}}</label>
+    <br>
+    <button mat-raised-button color="primary"  class="input-form-add-friend"(click)="login(form.value)">Registrarse</button>
+    <br>
+    <a (click)="isRegisterTemplate=false">¿Ya estás registrado? Inicia Sesión</a>
+  </form>
+</section>
+
+
+<button mat-raised-button color="primary"  class="input-form-add-friend"(click)="logOut()">Registrarse</button>
+<button mat-raised-button color="primary"  class="input-form-add-friend"(click)="getUser()">Registrarse</button>
+
+<!--<section class="login-page" *ngIf="isRegisterTemplate">
+  <form class="login-form" novalidate [formGroup]="formRegister">
+    <h4>Regístrese</h4>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Nombre" formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="text" placeholder="Número de documento" formControlName="document">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="date" placeholder="Fecha de nacimiento" formControlName="born">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="text" placeholder="Género" formControlName="gender">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="text" placeholder="Correo electrónico" formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="text" placeholder="Número de celular" formControlName="cel">
+    </mat-form-field>
+    <label class="error">{{errorMessage}}</label>
+    <label class="success">{{successMessage}}</label>
+    <br>
+    <button mat-raised-button color="primary" class="input-form-add-friend" (click)="login(form.value)">Iniciar sesión
+    </button>
+    <br>
+    <a (click)="isRegisterTemplate=false">¿Ya estás registrado? Inicia sesión</a>
+  </form>
+</section>-->
+
+
