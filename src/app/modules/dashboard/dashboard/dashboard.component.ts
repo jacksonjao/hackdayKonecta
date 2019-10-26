@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
-import {AngularFireAuth} from '@angular/fire/auth';
-import * as firebase from 'firebase';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {DatabaseService} from '../services/database.service';
+import {AuthService} from '../../../core/services/auth.service';
+import {Route, Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -10,14 +12,14 @@ import * as firebase from 'firebase';
 })
 export class DashboardComponent implements OnInit {
   formRegister: FormGroup;
-  constructor() {
+  constructor(private db: DatabaseService, private authService: AuthService, private router: Router) {
     this.formRegister = new FormGroup({
-      name: new FormControl(''),
-      document: new FormControl(''),
-      birthday: new FormControl(''),
-      gender: new FormControl(''),
-      email: new FormControl(''),
-      cel: new FormControl(''),
+      name: new FormControl('', Validators.required),
+      document: new FormControl('', Validators.required),
+      birthday: new FormControl('', Validators.required),
+      gender: new FormControl('', Validators.required),
+      email: new FormControl('', Validators.required),
+      cel: new FormControl('', Validators.required),
     });
   }
 
@@ -25,7 +27,14 @@ export class DashboardComponent implements OnInit {
   }
 
   addClient(value) {
-console.log(value);
+    if ( this.formRegister.status === 'VALID') {
+      this.db.ceateDocument(value);
+    }
+  }
+
+  logOut() {
+   this.authService.logOut();
+   this.router.navigate(['/']);
   }
 
 }

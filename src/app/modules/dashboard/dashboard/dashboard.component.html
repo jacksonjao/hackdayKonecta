@@ -8,11 +8,11 @@
   </mat-form-field>
 
   <mat-form-field class="form-field-add-client">
-    <input matInput type="text" placeholder="Documento" formControlName="document">
+    <input matInput type="number" placeholder="Documento" formControlName="document">
   </mat-form-field>
 
   <mat-form-field class="form-field-add-client">
-    <input matInput type="text" placeholder="Fecha de nacieminto" formControlName="birthday">
+    <input matInput type="date" placeholder="Fecha de nacieminto" formControlName="birthday">
   </mat-form-field>
 
   <mat-form-field class="form-field-add-client">
@@ -20,11 +20,11 @@
   </mat-form-field>
 
   <mat-form-field class="form-field-add-client">
-    <input matInput type="text" placeholder="Email" formControlName="email">
+    <input matInput type="email" placeholder="Email" formControlName="email">
   </mat-form-field>
 
   <mat-form-field class="form-field-add-client">
-    <input matInput type="text" placeholder="Número Celular" formControlName="cel">
+    <input matInput type="number" placeholder="Número Celular" formControlName="cel">
   </mat-form-field>
  <!---  <label class="error">{{errorMessage}}</label>
   <label class="success">{{successMessage}}</label> --->
@@ -33,5 +33,5 @@
   <br>
 </form>
 
-  <button mat-raised-button color="primary"  class="input-form-log-out"(click)="addClient(formRegister.value)">Cerrar sesión</button>
+  <button mat-raised-button color="primary"  class="input-form-log-out"(click)="logOut()">Cerrar sesión</button>
 </section>

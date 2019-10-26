@@ -2,11 +2,11 @@
   <form class="login-form" novalidate [formGroup]="form">
     <h4>INICIAR SESIÓN</h4>
     <mat-form-field>
-      <input matInput type="text" placeholder="Email" formControlName="email">
+      <input matInput type="email" placeholder="Email" formControlName="email">
     </mat-form-field>
 
     <mat-form-field>
-      <input matInput type="text" placeholder="Password" formControlName="password">
+      <input matInput type="password" placeholder="Password" formControlName="password">
     </mat-form-field>
     <label class="error">{{errorMessage}}</label>
     <label class="success">{{successMessage}}</label>
@@ -31,7 +31,7 @@
     <label class="error">{{errorMessage}}</label>
     <label class="success">{{successMessage}}</label>
     <br>
-    <button mat-raised-button color="primary"  class="input-form-add-friend"(click)="login(form.value)">Registrarse</button>
+    <button mat-raised-button color="primary"  class="input-form-add-friend"(click)="tryRegister(form.value)">Registrarse</button>
     <br>
     <br>
     <a (click)="isRegisterTemplate=false">Iniciar Sesión</a>

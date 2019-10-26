@@ -24,11 +24,7 @@ export class AuthComponent implements OnInit {
     });
     this.formRegister = new FormGroup({
       name: new FormControl(''),
-      document: new FormControl(''),
-      born: new FormControl(''),
-      gender: new FormControl(''),
-      email: new FormControl(''),
-      cel: new FormControl(''),
+      password: new FormControl(''),
     });
   }
   tryRegister(value) {
