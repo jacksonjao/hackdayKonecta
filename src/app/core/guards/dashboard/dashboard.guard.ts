@@ -17,7 +17,7 @@ import {catchError, map} from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
+export class DashboardGuard implements CanActivate, CanActivateChild, CanLoad {
 
   constructor(private router: Router, private authService: AuthService) {
   }
@@ -45,14 +45,13 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
     return this.authService.getUser().pipe(
       map(e => {
         if (e) {
-          return true;
+          this.router.navigate(['/dashboard']);
         } else {
-         this.router.navigate(['/authentication']);
+          return true;
         }
       }),
       catchError((err) => {
-        this.router.navigate(['/authentication']);
-        return of(false);
+        return of(true);
       })
     ); }
 }

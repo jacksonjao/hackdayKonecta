@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
+import {FormControl, FormGroup} from '@angular/forms';
 import {AuthService} from '../services/auth.service';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {Router} from '@angular/router';
@@ -43,6 +43,7 @@ export class AuthComponent implements OnInit {
       });
   }
   ngOnInit() {
+   // this.checkIfUserIsAuth()
   }
 
   login(value) {
@@ -50,7 +51,7 @@ export class AuthComponent implements OnInit {
       console.log(res);
       this.errorMessage = '';
       this.successMessage = 'Inicio de sesión exitoso';
-     // this.router.navigateByUrl('/dashboard');
+      this.router.navigateByUrl('/dashboard');
 
     }, err => {
       this.errorMessage = err.message;
@@ -60,12 +61,6 @@ export class AuthComponent implements OnInit {
 
   logOut() {
     this.authService.logOut().then(res => {
-      console.log(res);
-    });
-  }
-
-  getUser() {
-    this.authService.getUser().subscribe(res => {
       console.log(res);
     });
   }

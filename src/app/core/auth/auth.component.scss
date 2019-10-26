@@ -19,6 +19,9 @@ input{
   background-size: cover;
 }
 .login-form{
+  -webkit-box-shadow: -1px 2px 31px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 2px 31px -3px rgba(0,0,0,0.75);
+  box-shadow: -1px 2px 31px -3px rgba(0,0,0,0.75);
   display: flex;
   min-height: 30vh;
   width: 20vw;
@@ -28,9 +31,25 @@ input{
 justify-content: center;
   border-radius: 10px;
   padding: 1rem;
-  background: rgba(245, 245, 245, 0.4);
+  background: rgba(245, 245, 245, 0.6);
+  position: relative;
 }
+a{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 1.7rem;
+  color: white;
+  width: 100%;
+  font-size: 0.8rem;
+  background: rgba(3, 3, 3, 0.57);
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
 
+}
 a:hover{
+
   cursor: pointer;
 }

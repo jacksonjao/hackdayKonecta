@@ -13,7 +13,8 @@
     <br>
     <button mat-raised-button color="primary"  class="input-form-add-friend"(click)="login(form.value)">Iniciar sesión</button>
     <br>
-    <a (click)="isRegisterTemplate=true">¡Regístrate!</a>
+    <br>
+    <a (click)="isRegisterTemplate=true">¡Regístrate! :D</a>
   </form>
 </section>
 
@@ -32,48 +33,7 @@
     <br>
     <button mat-raised-button color="primary"  class="input-form-add-friend"(click)="login(form.value)">Registrarse</button>
     <br>
-    <a (click)="isRegisterTemplate=false">¿Ya estás registrado? Inicia Sesión</a>
+    <br>
+    <a (click)="isRegisterTemplate=false">Iniciar Sesión</a>
   </form>
 </section>
-
-
-<button mat-raised-button color="primary"  class="input-form-add-friend"(click)="logOut()">Registrarse</button>
-<button mat-raised-button color="primary"  class="input-form-add-friend"(click)="getUser()">Registrarse</button>
-
-<!--<section class="login-page" *ngIf="isRegisterTemplate">
-  <form class="login-form" novalidate [formGroup]="formRegister">
-    <h4>Regístrese</h4>
-    <mat-form-field>
-      <input matInput type="text" placeholder="Nombre" formControlName="name">
-    </mat-form-field>
-
-    <mat-form-field>
-      <input matInput type="text" placeholder="Número de documento" formControlName="document">
-    </mat-form-field>
-
-    <mat-form-field>
-      <input matInput type="date" placeholder="Fecha de nacimiento" formControlName="born">
-    </mat-form-field>
-
-    <mat-form-field>
-      <input matInput type="text" placeholder="Género" formControlName="gender">
-    </mat-form-field>
-
-    <mat-form-field>
-      <input matInput type="text" placeholder="Correo electrónico" formControlName="email">
-    </mat-form-field>
-
-    <mat-form-field>
-      <input matInput type="text" placeholder="Número de celular" formControlName="cel">
-    </mat-form-field>
-    <label class="error">{{errorMessage}}</label>
-    <label class="success">{{successMessage}}</label>
-    <br>
-    <button mat-raised-button color="primary" class="input-form-add-friend" (click)="login(form.value)">Iniciar sesión
-    </button>
-    <br>
-    <a (click)="isRegisterTemplate=false">¿Ya estás registrado? Inicia sesión</a>
-  </form>
-</section>-->
-
-
