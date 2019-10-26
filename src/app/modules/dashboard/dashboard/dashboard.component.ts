@@ -9,11 +9,23 @@ import * as firebase from 'firebase';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  formRegister: FormGroup;
   constructor() {
-
+    this.formRegister = new FormGroup({
+      name: new FormControl(''),
+      document: new FormControl(''),
+      birthday: new FormControl(''),
+      gender: new FormControl(''),
+      email: new FormControl(''),
+      cel: new FormControl(''),
+    });
   }
 
   ngOnInit() {
+  }
+
+  addClient(value) {
+console.log(value);
   }
 
 }

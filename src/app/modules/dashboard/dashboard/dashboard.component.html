@@ -1,0 +1,33 @@
+<section class="section-add-client">
+<h1>Registra un nuevo usuario</h1>
+<form class="add-client-form" novalidate [formGroup]="formRegister">
+  <mat-form-field class="form-field-add-client">
+    <input matInput type="text" placeholder="Nombre" formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field class="form-field-add-client">
+    <input matInput type="text" placeholder="Documento" formControlName="document">
+  </mat-form-field>
+
+  <mat-form-field class="form-field-add-client">
+    <input matInput type="text" placeholder="Fecha de nacieminto" formControlName="birthday">
+  </mat-form-field>
+
+  <mat-form-field class="form-field-add-client">
+    <input matInput type="text" placeholder="Genero" formControlName="gender">
+  </mat-form-field>
+
+  <mat-form-field class="form-field-add-client">
+    <input matInput type="text" placeholder="Email" formControlName="email">
+  </mat-form-field>
+
+  <mat-form-field class="form-field-add-client">
+    <input matInput type="text" placeholder="Número Celular" formControlName="cel">
+  </mat-form-field>
+ <!---  <label class="error">{{errorMessage}}</label>
+  <label class="success">{{successMessage}}</label> --->
+  <br>
+  <button mat-raised-button color="primary"  class="input-form-add-friend"(click)="addClient(formRegister.value)">Ingresar Usuario</button>
+  <br>
+</form>
+</section>
