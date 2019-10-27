@@ -8,9 +8,10 @@ import {MatButtonModule} from '@angular/material/button';
 import {DatabaseService} from './services/database.service';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AuthService} from '../../core/services/auth.service';
+import { DocumentComponent } from './document/document.component';
 
 @NgModule({
-  declarations: [DashboardComponent],
+  declarations: [DashboardComponent, DocumentComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
